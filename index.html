@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine Website</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- First Section: Valentine Landing Page -->
+<section id="valentine-main">
+  <iframe id="love-frame"
+          src="sections/love-letter/index.html">
+  </iframe>
+</section>
+
+<!-- Tabs Section -->
+<section id="tabs-section" class="hidden">
+  <div class="tabs">
+    <button class="tab-btn" data-tab="love-letter">Love Letter</button>
+    <button class="tab-btn" data-tab="academy">Academy</button>
+    <button class="tab-btn" data-tab="gallery">Gallery</button>
+  </div>
+
+  <div class="tab-content">
+    <iframe id="love-letter" class="tab-pane hidden" src="sections/love-letter/love-letter.html"></iframe>
+    <iframe id="academy" class="tab-pane hidden" src="sections/academy/index.html"></iframe>
+    <iframe id="gallery" class="tab-pane hidden" src="sections/gallery/index.html"></iframe>
+  </div>
+</section>
+
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>

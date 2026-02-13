@@ -1,0 +1,289 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 100%);
+  min-height: 100vh;
+}
+
+.hidden { 
+  display: none; 
+}
+
+#valentine-main {
+  height: 100vh;
+}
+
+#love-frame {
+  width: 100%;
+  height: 100vh;
+  border: none;
+  display: block;
+}
+
+#tabs-section {
+  padding: 30px 20px 20px;
+}
+
+/* Container-level romantic tabs */
+.tabs { 
+  display: flex; 
+  justify-content: center;
+  gap: 8px; 
+  margin: 0 auto 30px;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 8px;
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(255, 107, 157, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 40px;
+  background: transparent;
+  color: #c9627a;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ff6b9d 0%, #ffa8c5 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 40px;
+  z-index: -1;
+}
+
+.tab-btn:hover {
+  color: #ff6b9d;
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(255, 107, 157, 0.4);
+}
+
+.tab-btn.active::before {
+  opacity: 1;
+}
+
+.tab-content {
+  width: 100%;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-pane { 
+  width: 100%; 
+  height: 90vh; 
+  border: none; 
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(255, 107, 157, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+  #tabs-section {
+    padding: 20px 10px 10px;
+  }
+  
+  .tabs {
+    flex-direction: column;
+    max-width: 90%;
+    padding: 6px;
+    gap: 6px;
+    border-radius: 20px;
+  }
+  
+  .tab-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  .tab-pane {
+    height: 85vh;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .tabs {
+    max-width: 500px;
+  }
+  
+  .tab-btn {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+}
+
+/* Add this to your assets/css/styles.css file */
+
+/* Love Letter Styles - integrated from love-letter.html */
+.letter-container {
+  max-width: 650px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 4rem 3.5rem;
+  box-shadow: 0 20px 60px rgba(255, 107, 157, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  position: relative;
+  animation: fadeIn 1.2s ease-in-out;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.letter-container::before,
+.letter-container::after {
+  content: '♥';
+  position: absolute;
+  font-size: 1.5rem;
+  color: rgba(255, 107, 157, 0.3);
+}
+
+.letter-container::before {
+  top: 2rem;
+  left: 2rem;
+}
+
+.letter-container::after {
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.letter-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.to-my-love {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #ff6b9d;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(255, 107, 157, 0.1);
+  animation: fadeIn 1.5s ease-in-out 0.3s backwards;
+}
+
+.letter-body {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.25rem;
+  line-height: 2;
+  color: #5a3a47;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out 0.6s backwards;
+}
+
+.letter-body p {
+  margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease-in-out backwards;
+  font-style: italic;
+}
+
+.letter-body p:nth-child(1) {
+  animation-delay: 0.8s;
+}
+
+.letter-body p:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.letter-body p:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+.signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #ff6b9d;
+  text-align: right;
+  margin-top: 3rem;
+  animation: fadeIn 1.5s ease-in-out 1.5s backwards;
+}
+
+.divider {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff6b9d, transparent);
+  margin: 2rem auto;
+  animation: fadeIn 1.5s ease-in-out 0.5s backwards;
+}
+
+@media (max-width: 768px) {
+  .letter-container {
+    padding: 3rem 2rem;
+  }
+
+  .to-my-love {
+    font-size: 2.5rem;
+  }
+
+  .letter-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .signature {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .letter-container {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .to-my-love {
+    font-size: 2rem;
+  }
+
+  .letter-body {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .signature {
+    font-size: 1.8rem;
+  }
+}
+

@@ -1,0 +1,92 @@
+/* Simple Valentine's Update - Change background to pink, remove boxes */
+
+/* Change all white backgrounds to transparent/pink */
+body {
+  background: transparent !important;
+}
+
+.hero {
+  background: transparent !important;
+}
+
+.hero.is-light {
+  background: transparent !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.section {
+  background: transparent !important;
+}
+
+.footer {
+  background: transparent !important;
+  border-top: none !important;
+}
+
+/* Remove overflow issues that cause second scrollbar */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure container doesn't create its own scrollbar */
+.container {
+  max-width: 100% !important;
+  overflow: visible !important;
+}
+
+/* Update colors to pink theme */
+:root {
+  --primary-color: #ff6b9d !important;
+  --primary-hover: #ff5a8c !important;
+  --secondary-color: #c9627a !important;
+  --text-primary: #5a3a47 !important;
+  --text-secondary: #8b6575 !important;
+  --background-primary: transparent !important;
+  --background-secondary: rgba(255, 255, 255, 0.3) !important;
+  --background-accent: rgba(255, 255, 255, 0.5) !important;
+  --border-color: rgba(255, 107, 157, 0.2) !important;
+}
+
+/* Pink buttons */
+.button.is-dark {
+  background: #ff6b9d !important;
+}
+
+.button.is-dark:hover {
+  background: #ff5a8c !important;
+}
+
+/* Make content blend better */
+.content.has-text-justified {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 107, 157, 0.2);
+}
+
+pre {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(255, 107, 157, 0.2) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Links pink */
+a {
+  color: #ff6b9d !important;
+}
+
+a:hover {
+  color: #ff5a8c !important;
+}
+
+.publication-authors a {
+  color: #ff6b9d !important;
+}

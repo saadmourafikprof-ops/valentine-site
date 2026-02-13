@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+
+  /* Hide scrollbar but allow scrolling */
+  html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  body {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  body {
+    margin: 0;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  .letter-container {
+    max-width: 650px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 4rem 3.5rem;
+    box-shadow: 0 20px 60px rgba(255, 107, 157, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    position: relative;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Decorative corner elements */
+  .letter-container::before,
+  .letter-container::after {
+    content: '♥';
+    position: absolute;
+    font-size: 1.5rem;
+    color: rgba(255, 107, 157, 0.3);
+  }
+
+  .letter-container::before {
+    top: 2rem;
+    left: 2rem;
+  }
+
+  .letter-container::after {
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  .letter-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .to-my-love {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #ff6b9d;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(255, 107, 157, 0.1);
+    animation: fadeIn 1.5s ease-in-out 0.3s backwards;
+  }
+
+  .letter-body {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.25rem;
+    line-height: 2;
+    color: #5a3a47;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out 0.6s backwards;
+  }
+
+  .letter-body p {
+    margin-bottom: 2rem;
+    animation: fadeIn 1.5s ease-in-out backwards;
+  }
+
+  .letter-body p:nth-child(1) {
+    animation-delay: 0.8s;
+    font-style: italic;
+  }
+
+  .letter-body p:nth-child(2) {
+    animation-delay: 1s;
+    font-style: italic;
+  }
+
+  .letter-body p:nth-child(3) {
+    animation-delay: 1.2s;
+    font-style: italic;
+  }
+
+  .signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: #ff6b9d;
+    text-align: right;
+    margin-top: 3rem;
+    animation: fadeIn 1.5s ease-in-out 1.5s backwards;
+  }
+
+  /* Decorative divider */
+  .divider {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff6b9d, transparent);
+    margin: 2rem auto;
+    animation: fadeIn 1.5s ease-in-out 0.5s backwards;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .letter-container {
+      padding: 3rem 2rem;
+    }
+
+    .to-my-love {
+      font-size: 2.5rem;
+    }
+
+    .letter-body {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .signature {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    body {
+      padding: 1rem;
+    }
+
+    .letter-container {
+      padding: 2.5rem 1.5rem;
+    }
+
+    .to-my-love {
+      font-size: 2rem;
+    }
+
+    .letter-body {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .signature {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="letter-container">
+  <div class="letter-header">
+    <h1 class="to-my-love">To Marn Marn</h1>
+    <div class="divider"></div>
+  </div>
+
+  <div class="letter-body">
+    <p>
+      Whenever you read this, I hope you know how much you mean to me.
+    </p>
+
+    <p>
+      I don't need grand gestures or perfect moments; just being with you, sharing laughs, hugs, and even the quiet, simple times; that's everything I could ever want.
+    </p>
+
+    <p>
+      I'll always be here to cheer you up, to support you, and to remind you how loved you are.
+    </p>
+  </div>
+
+  <div class="signature">
+    I cupcake you ♡
+  </div>
+</div>
+
+</body>
+</html>
